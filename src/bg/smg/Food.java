@@ -34,4 +34,6 @@ public class Food {
     public void setKg(double kg) {
         this.kg = kg;
     }
+
+
 }

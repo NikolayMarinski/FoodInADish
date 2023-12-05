@@ -11,8 +11,7 @@ public class Food {
     }
 
     public Food() {
-        this.name = "";
-        this.kg = 0;
+
     }
     public Food(String name, double kg) {
         this.name = name;

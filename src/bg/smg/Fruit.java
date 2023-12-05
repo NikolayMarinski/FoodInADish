@@ -3,8 +3,8 @@ package bg.smg;
 public class Fruit extends Food{
    private boolean isReadyToEat = true;
 
-   public Fruit(boolean isReadyToEat) {
-      this.isReadyToEat = isReadyToEat;
+   public Fruit() {
+
    }
 
    public Fruit(String name, double kg, boolean isReadyToEat) {

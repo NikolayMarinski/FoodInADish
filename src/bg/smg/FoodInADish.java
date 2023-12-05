@@ -1,8 +1,21 @@
 package bg.smg;
 
+import javax.swing.*;
+
 public class FoodInADish<T> extends DrawableObj implements Comparable<FoodInADish<T>>{
     private T food;
     private String dishColour;
+
+
+    public FoodInADish() {
+
+    }
+
+    public FoodInADish(int xCoord, int yCoord, int width, int height, T food, String dishColour) {
+        super(xCoord, yCoord, width, height);
+        this.food = food;
+        this.dishColour = dishColour;
+    }
 
     @Override
     public int compareTo(FoodInADish<T> o) {
@@ -12,11 +25,14 @@ public class FoodInADish<T> extends DrawableObj implements Comparable<FoodInADis
         else if(o.getFood() instanceof Vegetable && this.food instanceof Vegetable){
             return Double.compare(((Vegetable)this.food).getKg(),((Vegetable)o.getFood()).getKg());
         }
-        else
+        else {
+            return Double.compare(((Fruit)this.food).getKg(),((Vegetable)o.getFood()).getKg());
+        }
+        return 0;
     }
 
     @Override
-    public void draw() {
+    public JPanel draw() {
 
     }
 
